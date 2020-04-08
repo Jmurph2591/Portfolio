@@ -1,0 +1,424 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('images/hero-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+}
+
+nav {
+ width: 100%;
+ height: 55px;
+ position: fixed;
+}
+
+.navScroll {
+    background: green;
+}
+
+.navLinks {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    right: 0;
+    padding-right: 150px;
+    padding-top: 20px;
+    color: white;
+}
+
+/*
+.navLink:visited {
+    color: white;
+
+}
+
+.navLink:hover {
+    color: grey;
+}
+*/
+
+h1 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    color: white;
+    margin: 0;
+    padding-left: 150px;
+    padding-top: 20px;
+}
+
+.heroText {
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    padding-left: 150px;
+    width: 1100px;
+    padding-top: 180px;
+}
+
+.heroTitle {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.heroSubtext {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.heroLongText {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.hireMe-btn {
+    font-family: 'Maven Pro', sans-serif;
+    width: 200px;
+    height: 45px;
+    margin-top: 30px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.skillsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 100px;
+    padding-left: 150px;
+}
+
+.skillCard {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 300px;
+    text-align: left;
+    font-size: 10px;
+    margin-right: 80px;
+}
+
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    font-size: 17px;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    padding-left: 150px;
+    margin-top: 90px;
+}
+
+.about-pic {
+  width: auto;
+  height: auto;
+  margin-right: 50px;
+}
+
+.aboutBox {
+    font-family: 'Maven Pro', sans-serif;
+    padding-top: 50px;
+}
+
+.aboutTitle {
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.abtSubtext {
+    padding-bottom: 20px;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.abt-text {
+    padding-bottom: 16px;
+    width: 550px;
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.resume-btn {
+    border: 1px solid grey;
+    background: none;
+    border: 1px solid black;
+    color: black;
+    width: 170px;
+    height: 50px;
+    font-size: 14px;
+}
+
+.fa-file-download {
+    margin-right: 8px;
+    font-size: 15px;
+}
+
+h4 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px; 
+    margin-top: 90px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.skillsSubtext {
+    padding-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+
+.projectType {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.proj-btn {
+    width: 150px;
+    height: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    border: 1px solid #dfdfdf;
+    background: transparent;
+}
+
+.proj-1:hover {
+    background: blue;
+    color: white;
+}
+
+.proj-2:hover {
+    background: red;
+    color: white;
+}
+
+.proj-3:hover {
+    background: green;
+    color: white;
+}
+
+
+.projectGroup {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.projectBox {
+    margin: 0 20px 20px;
+}
+
+
+
+
+.skills {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Raleway', sans-serif;
+}
+
+.skillContainer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.skillBox {
+    width:600px;
+    margin-bottom: 30px;
+}
+
+.skillName {
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.skillPercent {
+    float: right;
+    padding-bottom: 5px;
+    font-size: 17px;
+}
+.progressBox {
+    background: grey;
+    width: 100%;
+    height: 8px;
+    margin: 0;
+}
+
+.progressBar {
+    background: purple;
+    width: 100%;
+    height: 8px;
+}
+
+.references {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.refBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding-bottom: 100px;
+}
+
+.refCard {
+    width: 530px;
+    height: 230px;
+    border: 1px solid #dfdfdf;
+    padding: 35px;
+    margin-right: 20px;
+}
+
+.refHead {
+    display: flex;
+    flex-direction: row;
+}
+
+.refText {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.title {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+.refLongText {
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.fa-quote-left {
+    background: grey;
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 6px;
+    padding-right: 2px;
+    margin-right: 30px;
+}
+
+.form-container {
+
+    margin-top: 40px;
+}
+
+form {
+    font-family: 'Raleway', sans-serif; 
+}
+
+input {
+    width: 250px;
+    height: 60px;
+    padding-left: 20px;
+}
+
+input[type=text]:focus{
+    outline: 2px solid grey;    
+  }
+
+textarea {
+    width: 755px;
+    height: 200px;
+    border: 1px solid #dfdfdf;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+}
+
+.submit-btn {
+    width: 150px;
+    height: 40px;
+    color: grey;
+    background: white;
+    border: 1px solid #dfdfdf;
+}
+
+footer {
+    background: black;
+    height: 150px;
+    margin-top: 180px;
+    color: white;
+    padding-top: 50px;
+}
+
+.fab {
+    font-size: 30px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+}
+
+h6 {
+    font-size: 15px;
+    margin: 0;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: lighter;
+}
+
