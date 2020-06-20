@@ -10,10 +10,13 @@
         href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;900&family=Raleway:wght@200;900&display=swap"
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="jquery.contenthover.js"></script>
     <script src="https://kit.fontawesome.com/3ac3142e2a.js" crossorigin="anonymous"></script>
     <script src='main.js'></script>
+    <script src='filter.js'></script>
+    <script src='skills.js'></script>
+    <script src='slider.js'></script>
 </head>
+<div id='home'></div>
 
 <body>
     <div class='hero'>
@@ -21,45 +24,48 @@
         <nav id='top-nav' class='top-nav'>
             <h1 class='name'>JOE MURPHY</h1>
             <div class='navLinks'>
-                <a class='navLink' href=''>Home</a>
-                <a class='navLink' href=''>About</a>
-                <a class='navLink' href=''>Projects</a>
-                <a class='navLink' href=''>Skills</a>
+                <a class='navLink' href='#home'>Home</a>
+                <a class='navLink' href='#about'>About</a>
+                <a class='navLink' href='#projects'>Projects</a>
+                <a class='navLink' href='#skills'>Skills</a>
             </div>
         </nav>
 
         <div class='heroText'>
             <div class='heroTitle'>Business Professional.<br>Project Manager.<br>Designer.<br>Web Developer.</div>
             <div class='heroSubtext'>Passion for technology, web applications, music, and innovation.</div>
-            <div class='heroLongText'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            <div class='heroLongText'>Experienced Technical Project Manager with a demonstrated history 
+                of working in the marketing and advertising industry. Strong program and project management 
+                skills in Management, Business Operations, Marketing Strategy, Branding, HTML, CSS, Javascript, React, NodeJS, AdobeSuite, and 
+                Agile Project Management.
             </div>
-            <button class='hireMe-btn'>HIRE ME</button>
+            <button onclick="window.location.href='#connect'" class='hireMe-btn'>CONTACT ME</button>
         </div>
+        <div id='hireme'></div>
     </div>
-
     <div class='skillsCards'>
         <div class='skillCard'>
-            <h2>.BRANDING</h2>
-            <h3>Still top of and the drops. What don't issued character god,
-                no ports, credit question and too do curse casting problem.
-                will the one could apply.</h3>
+            <h2>.MARKETING</h2>
+            <h3>Marketing products and brands is one of my passions. While marketing is 
+                an extremely broad term, I excel most in marketing strategy, branding, 
+                content creation, digital marketing, and social media management.  </h3>
         </div>
         <div class='skillCard'>
-            <h2>.BRANDING</h2>
-            <h3>Still top of and the drops. What don't issued character god,
-                no ports, credit question and too do curse casting problem.
-                will the one could apply.</h3>
+            <h2>.PROJECT MANAGEMENT</h2>
+            <h3>Managing large projects with complex requirements requires excellent 
+                organization and communication, two areas I excel most in. I love taking 
+                projects from conception to a final polished product.</h3>
         </div>
         <div class='skillCard'>
-            <h2>.BRANDING</h2>
-            <h3>Still top of and the drops. What don't issued character god,
-                no ports, credit question and too do curse casting problem.
-                will the one could apply.</h3>
+            <h2>.WEB DEVELOPMENT</h2>
+            <h3>I find all aspects of computer science fascinating and I love writing 
+                code and tyring to solve complex problems. I also love it because 
+                it is a subject that is forever evolving, which keeps me on my toes to 
+                contsantly keep learning and improvng my skills.</h3>
         </div>
     </div>
 
+    <div id='about'></div>
     <div class='aboutMe'>
 
         <img class='about-pic' src='images/Untitled-2.jpg'>
@@ -67,196 +73,242 @@
         <div class='aboutBox'>
             <div class='aboutTitle'>ABOUT ME</div>
             <div class='abtSubtext'>Business Professional | Project Manager | Designer | Web Developer</div>
-            <div class='abt-text'>Still top of and the drops. What don't issued character god,
-                no ports, credit question. and too do curse casting problem.
-                Will the one could apply. He time I mostly we've hands was and felt refute.
-                Relays by life him, texts officers. Again. To stand help so to quite should
-                likely that, warned officers in by teacher's customary for experience. supplies
-                now sister how farther which of some question. One of the music. Would omens, through.
-            </div>
-            <button class='resume-btn'><i class="fas fa-file-download"></i>Download Resume</button>
+            <div class='abt-text'>Innovative, forward-thinking, music lover, tech-driven, no bullsh*t, business professional who 
+                is obsessed with learning new skills, working effectively and efficiently to accomplish exciting projects, and pushing 
+                business and marketing strategy forward by inspiring teams to come up with new ways of accomplishing and working together.</div>
+                
+            
+            <button id='resumeDownload' type='submit' class='resume-btn btn1'><i class="fas fa-file-download"></i>Download Resume</button>
+            
         </div>
     </div>
 
+    <div id='projects'></div>
     <div class='projects'>
+        <!-- title -->
         <h4>PROJECTS</h4>
-        <h5 class='skillsSubtext'>Still top of and the drops.
-            What don't issued character god, no ports,
-            credit question.
+        <h5 class='skillsSubtext'>View Some of The Largest Projects I've Worked On To-Date
         </h5>
+        <!-- filter buttons -->
         <div class='projectType'>
-            <button class='proj-btn proj-1'>ALL PROJECTS</button>
-            <button class='proj-btn proj-2'>WEB DEVELOPMENT</button>
-            <button class='proj-btn proj-3'>PROJECT MANAGEMENT</button>
+            <button class='proj-btn btn2 proj-1' id='all'>ALL PROJECTS</button>
+            <button class='proj-btn btn2 proj-2' id='development'>WEB DEVELOPMENT</button>
+            <button class='proj-btn btn2 proj-3' id='project-managment'>PROJECT MANAGEMENT</button>
         </div>
-
-        <div class='projectGroup'>
-
-            <div class='projectBox'>
-
-                <div class="container" id='container'></div>
-
-                <div class='container-text'>
-                    <div class="text proj-text-main plus">+</div>
-                    <div class="text proj-text-main">Technical Project Manager</div>
-                    <div class="text proj-text-subtext">Managed All Development Projects For Enterprise CRM Web
-                        Application</div>
+        <!-- menu items -->
+        <div class='projects-group'>
+            <!-- single items -->
+            <div class="project-item item-1 filterable webdev">
+                <img src="images/bfn_2.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class='job-textbox'>
+                        <div class="job-text project-title">BuyFordNow.com</div>
+                        <div class="job-text project-info">Managed and 
+                            strategized entirety of digital content across Ford's Tier II 
+                            Search Platform for all 38 Ford Dealer Advertising Groups. </div>
+                    </div>
                 </div>
-
             </div>
-
-            <div class='projectBox'>
-
-                <div class="container" id='container'></div>
-
-                <div class='container-text'>
-                    <div class="text proj-text-main plus">+</div>
-                    <div class="text proj-text-main">Technical Project Manager</div>
-                    <div class="text proj-text-subtext">Managed All Development Projects For Enterprise CRM Web
-                        Application</div>
+            <div class="project-item item-2 filterable project-mgmt">
+                <img src="images/audilogo_2.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class='job-textbox'>
+                        <div class="job-text project-title">Audi CRM Tool</div>
+                        <div class="job-text project-info">Managed all development projects for Audi USA's dealer communication CRM 
+                            platform as well as day to day maintenance and optimizations.</div>
+                    </div>
                 </div>
-
+            </div>
+            <div class="project-item item-3 filterable webdev">
+                <img src="images/hartwell_portfolio_1.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class='job-textbox'>
+                        <div class="job-text project-title">Hartwell Cement</div>
+                        <div class="job-text project-info">Designed and developed a responsive webiste for Hartwell Cement Company.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="project-item item-4 filterable project-mgmt">
+                <img src="images/kiara_blog_1_portfolio.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class='job-textbox'>
+                        <div class="job-text project-title">Writers Blog</div>
+                        <div class="job-text project-info">Designed and developed a responsive custom blog website for author Kiara Ashley.</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class='skills'>
+    <div id='skills' class='skills'>
         <h4>SKILLS</h4>
-        <h5 class='headSubtext'>Still top of and the drops.
-            What don't issued character god, no ports,
-            credit question.
+        <h5 class='headSubtext'>Some of My Top Skills
         </h5>
 
         <div class='skillContainer'>
-            <div class='skillBox'>
+            <div class='skillBox project-management'>
                 <div class='skillName'>Project Management</div>
-                <div class='skillPercent'>95%</div>
-                <div class='progressBox'></div>
-                <div class='progressBar'></div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
             </div>
 
-            <div class='skillBox'>
+            <div class='skillBox web-design'>
                 <div class='skillName'>Web Design UI/UX</div>
-                <div class='skillPercent'>95%</div>
-                <div class='progressBox'></div>
-                <div class='progressBar'></div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+            <div class='skillBox marketing-strategy'>
+                <div class='skillName'>Marketing Strategy</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+
+            <div class='skillBox agilePm'>
+                <div class='skillName'>Agile Project Management</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+            <div class='skillBox olAdvertising'>
+                <div class='skillName'>Online Advertising</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+
+            <div class='skillBox jira'>
+                <div class='skillName'>JIRA</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+            <div class='skillBox htmlCss'>
+                <div class='skillName'>HTML & CSS</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
+            </div>
+
+            <div class='skillBox javascript'>
+                <div class='skillName'>Javascript/jQuery/React</div>
+                <div class='skillPercent'></div>
+                <div class='progressBox'>
+                    <div class='progressBar'></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class='references'>
-        <h4>WHAT PEOPLE SAY ABOUT ME</h4>
-        <h5 class='skillsSubtext'>Still top of and the drops.
-            What don't issued character god, no ports,
-            credit question.
+    <div class='quotes'>
+        <h4>BUSINESS VALUES</h4>
+        <h5 class='skillsSubtext'>Core business ethics and beliefs that I believe are key ingredients to a successful career
         </h5>
 
-        <div class='refBoxes'>
-       
-
-            <div class='slider'>
-
-                <div class='slide active'>
-
-                    <div class='refCard'>
-                        <div class='refHead'>
-                            <i class="fas fa-quote-left"></i>
-                            <div class='refText'>
-                                <p class='name'>Bob Evans</p>
-                                <p class='title'>Managing Director | GTB </p>
-                            </div>
-                        </div>
-                        <p class='refLongText'>Still top of and the drops. What don't issued
-                            character god, no ports, credit question. and
-                            too do curse casting problem. Will the one could
-                            apply. He time I mostly we've hands was and felt
-                            refute.
-                        </p>
-                    </div>
-
-                    <div class='refCard'>
-                        <div class='refHead'>
-                            <i class="fas fa-quote-left"></i>
-                            <div class='refText'>
-                                <p class='name'>Bob Evans</p>
-                                <p class='title'>Managing Director | GTB </p>
-                            </div>
-                        </div>
-                        <p class='refLongText'>Still top of and the drops. What don't issued
-                            character god, no ports, credit question. and
-                            too do curse casting problem. Will the one could
-                            apply. He time I mostly we've hands was and felt
-                            refute.
-                        </p>
+        <div class='quoteBoxes'>
+            <div class='quoteCard'>
+                <div class='quoteHeader'>
+                    <i class="fas fa-quote-left"></i>
+                    <div class='quoteText'>
+                        <p class='name'>Treating People Right</p>
+                        <p class='title'>Why It's So Important</p>
                     </div>
                 </div>
-                <div class='slide active'>
-
-                        <div class='refCard'>
-                            <div class='refHead'>
-                                <i class="fas fa-quote-left"></i>
-                                <div class='refText'>
-                                    <p class='name'>Bob Evans</p>
-                                    <p class='title'>Managing Director | GTB </p>
-                                </div>
-                            </div>
-                            <p class='refLongText'>Still top of and the drops. What don't issued
-                                character god, no ports, credit question. and
-                                too do curse casting problem. Will the one could
-                                apply. He time I mostly we've hands was and felt
-                                refute.
-                            </p>
-                        </div>
-    
-                        <div class='refCard'>
-                            <div class='refHead'>
-                                <i class="fas fa-quote-left"></i>
-                                <div class='refText'>
-                                    <p class='name'>Bob Evans</p>
-                                    <p class='title'>Managing Director | GTB </p>
-                                </div>
-                            </div>
-                            <p class='refLongText'>Still top of and the drops. What don't issued
-                                character god, no ports, credit question. and
-                                too do curse casting problem. Will the one could
-                                apply. He time I mostly we've hands was and felt
-                                refute.
-                            </p>
+                <p class='quoteLongText'>Still top of and the drops. What don't issued
+                    character god, no ports, credit question. He time I mostly we've hands was and felt
+                    refute.
+                </p>
+            </div>
+            <div class='quoteCard'>
+                <div class='quoteHeader'>
+                    <i class="fas fa-quote-left"></i>
+                    <div class='quoteText'>
+                        <p class='name'>Organization</p>
+                        <p class='title'>Why It's Critical</p>
+                    </div>
+                </div>
+                <p class='quoteLongText'>Still top of and the drops. What don't issued
+                    character god, no ports, credit question. and
+                    too do curse casting problem. Will the one could
+                    apply. He time I mostly we've hands was and felt
+                    refute.
+                </p>
+            </div>
+            <div class='quoteCard'>
+                    <div class='quoteHeader'>
+                        <i class="fas fa-quote-left"></i>
+                        <div class='quoteText'>
+                            <p class='name'>Communication</p>
+                            <p class='title'>Why It's Critical</p>
                         </div>
                     </div>
-            </div>
-            <div class='prev'></div>
-            <div class='next'></div>
+                    <p class='quoteLongText'>Still top of and the drops. What don't issued
+                        character god, no ports, credit question. and
+                        too do curse casting problem. Will the one could
+                        apply. He time I mostly we've hands was and felt
+                        refute.
+                    </p>
+                </div>
+                <div class='quoteCard'>
+                        <div class='quoteHeader'>
+                            <i class="fas fa-quote-left"></i>
+                            <div class='quoteText'>
+                                <p class='name'>Appreciation</p>
+                                <p class='title'>Why It's Critical</p>
+                            </div>
+                        </div>
+                        <p class='quoteLongText'>Still top of and the drops. What don't issued
+                            character god, no ports, credit question. and
+                            too do curse casting problem. Will the one could
+                            apply. He time I mostly we've hands was and felt
+                            refute.
+                        </p>
+                    </div>
         </div>
     </div>
+    </div>
+    <div class='prev'></div>
+    <div class='next'></div>
+    </div>
+    </div>
 
-
-    <h4>LET'S CONNECT</h4>
-    <h5>Send Me A Message
+    <div id='connect'></div>
         <div class='form-container'>
-            <form>
+                <h4>LET'S CONNECT</h4>
+                <h5 class='send-msg'>Send Me A Message</h5>
+            <form id="ajax-contact" method="post" action="mailer.php">
                 <label for="lname"></label>
                 <input type="text" id="fname" name="firstname" placeholder="NAME">
 
                 <label for="lname"></label>
-                <input type="text" id="fname" name="firstname" placeholder="SUBJECT">
+                <input type="text" id="subject" name="subject" placeholder="SUBJECT">
 
                 <label for="lname"></label>
-                <input type="text" id="fname" name="firstname" placeholder="EMAIL">
+                <input type="text" id="email" name="email" placeholder="EMAIL">
                 <br>
                 <br>
-
 
                 <label></label>
                 <textarea id="message" name="message" placeholder="MESSAGE"></textarea>
                 <br>
-                <button class='submit-btn' type='submit'>SUBMIT</button>
+                <button type='submit' class='submit-btn btn3'>SUBMIT</button>
             </form>
+            <div class='success error' id="form-messages"></div>
         </div>
         <footer>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin"></i>
+            <div class='footer-box'>
+            <span><i class="fab fa-github"></i><i class="fab fa-linkedin"></i></span>
             <h6>&copy;2020 JOE MURPHY</h6>
+        </div>
         </footer>
 </body>
 

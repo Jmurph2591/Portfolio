@@ -10,6 +10,7 @@ body {
     padding: 10px;
     margin: 0;
     padding: 0;
+    background: #f3f4f9;
 }
 
 a {
@@ -20,17 +21,20 @@ a {
     background-image: url('images/hero-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    height: 710px;
     width: 100%;
 }
 
 #top-nav {
- width: 100%;
- height: 55px;
- position: fixed;
- transition: 1s;
- color: white;
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    transition: 1s;
+    color: white;
+    display: flex;
+    justify-content: center;
 }
+
 
 .navLinks {
     font-family: 'Maven Pro', sans-serif;
@@ -50,7 +54,7 @@ a {
     color: white;
 }
 */
-.navLinks > .navLink:hover {
+.navLinks>.navLink:hover {
     color: grey;
 }
 
@@ -105,8 +109,10 @@ h1.name {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 100px;
+    padding-top: 100px;
     padding-left: 150px;
+    padding-bottom: 70px;
+    background: white;
 }
 
 .skillCard {
@@ -114,7 +120,7 @@ h1.name {
     display: flex;
     flex-direction: column;
     height: 200px;
-    width: 300px;
+    width: 320px;
     text-align: left;
     font-size: 10px;
     margin-right: 80px;
@@ -123,7 +129,7 @@ h1.name {
 h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 23px;
     margin: 0;
 }
 
@@ -137,13 +143,14 @@ h3 {
     display: flex;
     flex-direction: row;
     padding-left: 150px;
-    margin-top: 90px;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
 
 .about-pic {
-  width: auto;
-  height: auto;
-  margin-right: 50px;
+    width: 300px;
+    height: 450px;
+    margin-right: 50px;
 }
 
 .aboutBox {
@@ -171,14 +178,47 @@ h3 {
 }
 
 .resume-btn {
-    border: 1px solid grey;
-    background: none;
-    border: 1px solid black;
-    color: black;
+    outline: none;
     width: 170px;
     height: 50px;
     font-size: 14px;
+    background: none;
+    border: 1px solid #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 200px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
 }
+
+.resume-btn:hover {
+    color: #fff;
+}
+
+.resume-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn1::before {
+    transform: scaleX(0);
+}
+
+.btn1:hover::before {
+    transform: scaleX(1);
+}
+
 
 .fa-file-download {
     margin-right: 8px;
@@ -189,8 +229,7 @@ h4 {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
     text-align: center;
-    font-size: 30px; 
-    margin-top: 90px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -210,7 +249,8 @@ h5 {
     display: flex;
     flex-direction: column;
     width: 100%;
-  
+    background: white;
+    padding-bottom: 80px;
 }
 
 .projectType {
@@ -222,28 +262,49 @@ h5 {
 .proj-btn {
     width: 150px;
     height: 30px;
+    background: none;
+    border: 1px solid #000;
     font-family: 'Raleway', sans-serif;
+    font-size: 11px;
     font-weight: 700;
-    border: 1px solid #dfdfdf;
-    background: transparent;
+    text-transform: uppercase;
+    /*min-width: 200px;*/
+    margin: 10px;
+    cursor: pointer;
+    /*transition: color 0.4s linear;
+    position: relative;*/
     outline: none;
+    border-radius: 7px;
+}
+
+.proj-btn:hover {
+    /*color: white;*/
+    background: #f3f4f9;
+}
+
+.proj-1 {
+background: #f2c675;
 }
 
 .proj-1:hover {
-    background: blue;
-    color: white;
+background: #fcaa0b;
+}
+
+.proj-2 {
+background: #dc80f5;
 }
 
 .proj-2:hover {
-    background: red;
-    color: white;
+    background: #be19eb;
+}
+
+.proj-3 {
+    background: #8787f0;
 }
 
 .proj-3:hover {
-    background: green;
-    color: white;
+    background: #4545f5;
 }
-
 
 .projectGroup {
     margin-top: 50px;
@@ -261,31 +322,114 @@ h5 {
     overflow: hidden;
 }
 
+.projects-group {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: center;
+    padding-bottom: 30px;
+    overflow: hidden;
+    margin-top: 50px;
+}
 
+.project-item {
+    width: 300px;
+    height: 250px;
+    position: relative;
+    margin-right: 20px;
+    margin-left: 20px;
+    transition: ease 3s;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
+    /*background: pink;*/
+}
 
+.image {
+    display: block;
+    width: 233px;
+    height: 233px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 9px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 90%;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    border-radius: 20px;
+}
+
+.job-textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 233px;
+    margin-left: 15px;
+    margin-right: 15px;
+    /*border: 1px solid white;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.job-text {
+    font-family: 'Raleway', sans-serif;
+}
+
+.project-item:hover .overlay {
+    height: 100%;
+}
+
+.project-title {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
+
+.project-info {
+    font-size: 14px;
+    color: grey;
+    text-align: center;
+}
 
 .skills {
-   display: flex;
-   flex-direction: column;
-   font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    background-color: #f3f4f9;
+    height: auto;
+    padding-bottom: 30px;
 }
 
 .skillContainer {
-    display:flex;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
 }
 
 .skillBox {
-    width:600px;
+    width: 400px;
     margin-bottom: 30px;
+    margin-right: 20px;
 }
 
 .skillName {
     font-weight: bold;
-    font-size: 20px;
-
+    font-size: 10px;
+    padding-bottom: 2px;
 }
 
 .skillPercent {
@@ -293,83 +437,60 @@ h5 {
     padding-bottom: 5px;
     font-size: 17px;
 }
+
 .progressBox {
-    background: grey;
+    background: #d8d8e7;
     width: 100%;
-    height: 8px;
+    height: 23px;
     margin: 0;
+    border-radius: 10px;
 }
 
 .progressBar {
-    background: purple;
-    width: 100%;
-    height: 8px;
+    background: #323282;
+    width: 1%;
+    height: 100%;
+    transition: width 2s;
+    border-radius: 10px;
 }
 
-.references {
+.quotes {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    padding-top: 40px;
+    background: white;
+    padding-bottom: 80px;
 }
 
-.refBoxes {
+.quoteBoxes {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 70px;
-    padding-bottom: 100px;
-    position: relative;
+    margin-top: 10px;
+    padding-bottom: 260px;
     overflow: hidden;
 }
 
-.slide {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    animation: slide 2s ease;
-    display: none;
-}
-
-@keyframes slide {
-    0%{
-        transform:scale(1.1);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
-
-.slide.active {
-    display: flex;
-}
-
-.refBoxes .prev {
-    left: 0;
-}
-
-.refBoxes .next {
-    right: 0;
-}
-
-
-
-.refCard {
-    width: 530px;
+.quoteCard {
+    width: 600px;
     height: 230px;
     border: 1px solid #dfdfdf;
     padding: 35px;
     margin-right: 20px;
+    transition: opacity .5s ease-in;
+    position: absolute;
 }
 
-.refHead {
+.quoteCard.quoteCard {
+    opacity: 0;
+}
+
+.quoteHeader {
     display: flex;
     flex-direction: row;
 }
 
-.refText {
+.quoteText {
     display: flex;
     flex-direction: column;
 }
@@ -387,9 +508,9 @@ h5 {
     font-weight: lighter;
 }
 
-.refLongText {
+.quoteLongText {
     font-family: 'Raleway', sans-serif;
-    
+
 }
 
 .fa-quote-left {
@@ -404,23 +525,39 @@ h5 {
 }
 
 .form-container {
-
-    margin-top: 40px;
+    /*background: #f3f4f9;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 30px;
 }
 
+.send-msg {
+    margin-bottom: 30px;
+}
+
+
 form {
-    font-family: 'Raleway', sans-serif; 
+    font-family: 'Raleway', sans-serif;
 }
 
 input {
     width: 250px;
     height: 60px;
     padding-left: 20px;
+    /*background-color: #f3f4f9;*/
+    color: black;
+    font-family: 'Raleway', sans-serif;
 }
 
-input[type=text]:focus{
-    outline: 2px solid grey;    
-  }
+input:focus {
+    border-color: grey;
+}
+
+::placeholder { 
+    color: black; 
+}
 
 textarea {
     width: 755px;
@@ -430,23 +567,104 @@ textarea {
     padding-top: 10px;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 40px;
+    /*background-color: #f3f4f9;*/
+    /*outline: 1px solid grey;*/
+    color: black;
+}
+
+textarea::placeholder {
+    color: black;  
+  }
+
+textarea:focus {
+    border-color: grey;
 }
 
 .submit-btn {
-    width: 150px;
-    height: 40px;
-    color: grey;
-    background: white;
-    border: 1px solid #dfdfdf;
+    width: 170px;
+    height: 50px;
+    font-size: 14px;
+    background: transparent;
+    border: 1px solid #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.submit-btn:hover {
+    /*background: white;
+    border: 1px solid grey;
+    opacity: 1;*/
+    color: white;
+}
+
+.submit-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.btn3::before {
+    transform: scaleX(0);
+}
+
+.btn3:hover::before {
+    transform: scaleX(1);
+}
+
+.success {
+    display: none;
+    padding: 1em;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.error {
+    display: none;
+    padding: 1em;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #b94a48;
+    background-color: #f2dede;
+    border: 1px solid rgba(185, 74, 72, 0.3);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
 
 footer {
     background: black;
     height: 150px;
-    margin-top: 180px;
     color: white;
     padding-top: 50px;
+    text-align: center;
 }
+
+.footer-box {
+    display:inline-block;
+    text-align: center;
+    vertical-align: bottom;
+}
+
 
 .fab {
     font-size: 30px;
@@ -459,13 +677,17 @@ h6 {
     margin: 0;
     font-family: 'Maven Pro', sans-serif;
     font-weight: lighter;
+    text-align: center;
 }
 
-.nav-background  {
+.nav-background {
     background-color: white;
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
 }
 
-.nav-background > h1,
+.nav-background>h1,
 .nav-background .navLink {
     color: black;
 }
@@ -474,6 +696,7 @@ h6 {
     background-image: url('images/Untitled-17.jpg');
     height: 100%;
 }
+
 .container-text {
     text-align: center;
     display: flex;
@@ -484,9 +707,7 @@ h6 {
     height: 100%;
     color: white;
 }
-.plus {
-    font-size: 60px;
-}
+
 .proj-text-main {
     font-family: 'Maven Pro', sans-serif;
     font-weight: bold;
@@ -499,5 +720,163 @@ h6 {
     width: 200px;
 }
 
+.hidden {
+    display: none;
+}
 
+@media only screen and (max-width: 700px){
 
+    .hero {
+        height: 620px;
+    }
+
+    #top-nav {
+    flex-direction: column;
+    }
+
+    h1.name {
+        margin: 0;
+    }
+
+    .navLinks {
+        padding-right: 15px;
+        font-size: 15px;
+        font-size: 12px;
+    }
+
+    h1.name {
+        padding-left: 15px;
+    }
+
+    .heroSubtext {
+        font-size: 14px;
+        width: 200px;
+    }
+
+    .heroLongText {
+        font-size: 11px;
+        width: 300px;
+    }
+
+    .heroText {
+        padding-left: 5px;
+    }
+
+    .heroTitle {
+        font-size: 27px;
+    }
+
+    .hireMe-btn {
+        width: 140px;
+        font-size: 15px;
+    }
+    
+    .skillsCards {
+        flex-direction: column;
+        padding-left: 15px;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .skillCard {
+        width: 290px;
+        height: 170px;
+    }
+
+    .aboutMe {
+        flex-direction: column;
+        padding-left: 15px;
+        padding-top: 40px;
+    }
+
+    .about-pic {
+        width: 100%;
+        height: 100%;
+    }
+
+    .abtSubtext {
+        font-size: 14px;
+    }
+
+    .abt-text {
+        width: 290px;
+        font-size: 13px;
+    }
+
+    /*should consider making this open as a new page and display my resume as a PDF*/
+    .resume-btn {
+        display: none;
+    }
+
+    h5 {
+        font-size: 11px;
+    }
+
+    .projects-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        margin-bottom: 40px;
+        margin-right: 0;
+        margin-left: 0;
+        width: 250px;
+    }
+
+    .projects {
+        padding-bottom: 0;
+    }
+
+    .proj-btn {
+        width: 80px;
+        font-size: 8px;
+    }
+
+    .skillsSubtext {
+        padding-bottom: 7px;
+    }
+
+    .skillContainer {
+        padding-left: 15px;
+    }
+
+    .skillPercent {
+        font-size: 13px;
+        padding-top: 3px;
+    }
+
+    .quotes {
+        padding-bottom: 110px;
+    }
+
+    .quoteCard {
+        width: 280px;
+        height: 300px;
+        margin-right: 0;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    input {
+        /*margin-left: 15px;*/
+        width: 280px;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        width: 280px;
+        /*margin-left: 15px;*/
+    }
+
+    .submit-btn {
+        width: 130px;
+    }
+
+}
